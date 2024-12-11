@@ -157,6 +157,14 @@ document.addEventListener("DOMContentLoaded", () => {
       currentSection = sections[0].getAttribute("id");
     }
 
+    // Check for the last section in the viewport
+    const lastSection = sections[sections.length - 1];
+    const lastSectionTop = lastSection.offsetTop - 100; // Adjust offset for fixed header
+
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+      currentSection = lastSection.getAttribute("id");
+    }
+
     // Update the active class on navbar links
     navLinks.forEach((link) => {
       link.classList.remove("active");
@@ -172,4 +180,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial call to set the active class when the page loads
   updateActiveClass();
 });
+
 

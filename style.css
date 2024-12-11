@@ -710,7 +710,6 @@ textarea:focus {
   body {
     font-size: 14px;
     padding: 2vh 2vw;
-    line-height: 1.5;
     overflow-x: hidden;
     box-sizing: border-box;
   }
@@ -896,7 +895,7 @@ textarea:focus {
   }
 
   .contact-info p {
-    font-size: 2.5vh;
+    font-size: 2.3vh;
   }
   .social-media-links img {
       height: 36px;
