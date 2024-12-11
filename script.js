@@ -152,6 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // If no section is in view (e.g., on initial load), default to the first section
+    if (!currentSection && sections.length > 0) {
+      currentSection = sections[0].getAttribute("id");
+    }
+
     // Update the active class on navbar links
     navLinks.forEach((link) => {
       link.classList.remove("active");
@@ -167,3 +172,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial call to set the active class when the page loads
   updateActiveClass();
 });
+

@@ -58,7 +58,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 13px 0;
-  border-bottom: 2px solid #34d399;
+  border-bottom: 2px solid #275cbe;
   padding-left: 10px;
   padding-right: 10px;
   position: fixed;
@@ -69,13 +69,13 @@ header {
   background: rgba(20, 30, 48, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(52, 211, 153, 0.5);
+  border-bottom: 2px solid rgba(19, 176, 176, 0.5);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   font-size: 26px;
-  color:#34d399;
+  color: rgba(7, 240, 240, 0.5);
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -95,12 +95,15 @@ nav ul li a {
   text-decoration: none;
   font-size: 18px;
   position: relative;
+  transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
 nav ul li a.active {
-  color: #34d399;
+  color: rgba(7, 240, 240, 0.5);
   font-weight: bold;
   text-decoration: none;
+  transform: scale(1.2); /* Zoom effect */
+  font-size: 1.3em;
 }
 
 #about {
@@ -170,6 +173,7 @@ nav ul li a.active {
   font-size: 16px;
   line-height: 1.4;
   color: #202020;
+  text-align: left;
 }
 
 .profile-info {
@@ -195,7 +199,7 @@ nav ul li a.active {
   border-color: 2px solid #3b82f6;
   background-color: #243b55;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 2;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -930,7 +934,10 @@ textarea:focus {
     font-size: 1.5vh;
   }
 
-  .project-link,
+  .project-link{
+    font-size: 2.5vh;
+    height: 5vh;
+  }
   .download-button {
     height:6vh ;
     font-size: 2.5vh;
