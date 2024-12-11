@@ -66,8 +66,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(20, 30, 48, 0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(22, 33, 56, 0.8);
+  backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 2px solid rgba(19, 176, 176, 0.5);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
