@@ -429,7 +429,7 @@ li {
 
 .project h3 {
   margin: 10px 0;
-  font-size: 3vh;
+  font-size: 2.5vh;
   color: black;
 }
 
@@ -866,7 +866,7 @@ textarea:focus {
     font-size: 2vh;
     margin-bottom: 2vh;
     line-height: 1.6;
-    text-align: justify;
+    /* text-align: justify; */
     padding-left: 15px;
   }
 
@@ -911,7 +911,7 @@ textarea:focus {
   }
 
   #resume li{
-    font-size: 2.5vh;
+    font-size: 15px;
   }
 
   .download-button,{
@@ -927,7 +927,7 @@ textarea:focus {
     width: auto;
   }
   .technologies span {
-    font-size: 2vh;
+    font-size: 1.5vh;
   }
 
   .project-link,
@@ -1047,7 +1047,11 @@ textarea:focus {
 
   .about-text p {
     text-align: justify;
-    font-size: 1.2rem;
+    word-spacing: normal;
+    white-space: inherit;
+    font-size: 15px;
+    
+    
   }
 
   /* Adjust skills section for smaller space */
