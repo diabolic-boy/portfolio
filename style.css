@@ -129,7 +129,7 @@ nav ul li a.active {
 .about-text h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: lightblue;
+  color: rgba(4, 247, 247, 0.5);
   text-align: left;
 }
 
@@ -153,12 +153,12 @@ nav ul li a.active {
   flex: 1;
   text-align: center;
   color: #ffffff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
+  /* transform: translateY(-10px); */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -207,8 +207,9 @@ nav ul li a.active {
   position: relative;
   transform-origin: top center;
   animation: swing 3s ease-in-out infinite;
+  
 }
-.profile-info img {
+.profile-info img  {
   width: 150px;
   height: 150px;
   margin-top: 30px;
@@ -251,6 +252,8 @@ nav ul li a.active {
   margin-top: 20px;
   text-align: left;
 }
+
+ 
 
 .contact-info p strong {
   color: #212121;
@@ -300,7 +303,7 @@ h2 {
   font-size: 36px;
   margin-bottom: 20px;
   text-align: center;
-  color: lightblue;
+  color: rgba(4, 247, 247, 0.5);
 }
 
 h3 {
@@ -427,7 +430,7 @@ li {
 }
 
 #portfolio h2 {
-  color: lightblue;
+  color: rgba(4, 247, 247, 0.5);
   margin-bottom: 20px;
 }
 

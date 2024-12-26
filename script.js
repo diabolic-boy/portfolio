@@ -3,10 +3,10 @@ window.addEventListener("scroll", () => {
   const skillCards = document.querySelectorAll(".skill-card");
   skillCards.forEach((card) => {
     const rect = card.getBoundingClientRect();
-    const distance = rect.top - window.innerHeight / 1.3;
+    const distance = rect.top - window.innerHeight / 1.5;
     if (distance < 0) {
-      card.style.transform = `rotateX(${distance / 10}deg) rotateY(${
-        distance / 10
+      card.style.transform = `rotateX(${distance / 20}deg) rotateY(${
+        distance / 20
       }deg)`;
       card.style.transition = "transform 0.5s ease";
     }
