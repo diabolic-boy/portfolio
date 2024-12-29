@@ -15,7 +15,7 @@ window.addEventListener("scroll", () => {
 
 // contactForm validation:
 
-document.querySelector("form").addEventListener("submit", function (event) {
+document.querySelector("form").addEventListener("submit", async function (event) {
   // Prevent default form submission
   event.preventDefault();
 
@@ -46,23 +46,46 @@ document.querySelector("form").addEventListener("submit", function (event) {
     return;
   }
 
-  // If valid, show modal with details
-  const modal = document.getElementById("popupModal");
-  const modalDetails = document.getElementById("modalDetails");
-  modalDetails.innerHTML = `
-    <p><strong>Name:</strong> ${fullName.value}</p>
-    <p><strong>Email:</strong> ${email.value}</p>
-    <p><strong>Message:</strong> ${message.value}</p>
-  `;
-  modal.style.display = "flex";
+  // Prepare form data for Web3Forms
+  const formData = new FormData();
+  formData.append("access_key", "838a2875-6d19-4ac8-8043-655d90cb9132"); // Replace with your Web3Form access key
+  formData.append("name", fullName.value);
+  formData.append("email", email.value);
+  formData.append("message", message.value);
 
-  // Clear the form
-  this.reset();
+  try {
+    // Submit data to Web3Forms
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
 
-  // Hide the modal automatically after 3 seconds
-  setTimeout(() => {
-    modal.style.display = "none";
-  }, 3000);
+    if (response.ok) {
+      // Show modal with success message
+      const modal = document.getElementById("popupModal");
+      const modalDetails = document.getElementById("modalDetails");
+      modalDetails.innerHTML = `
+        <p><strong>Name:</strong> ${fullName.value}</p>
+        <p><strong>Email:</strong> ${email.value}</p>
+        <p><strong>Message:</strong> ${message.value}</p>
+        <p><em>Your message has been sent successfully!</em></p>
+      `;
+      modal.style.display = "flex";
+
+      // Clear the form
+      this.reset();
+
+      // Hide the modal automatically after 3 seconds
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 3000);
+    } else {
+      alert("There was an issue submitting the form. Please try again later.");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("An error occurred while submitting the form. Please check your network connection.");
+  }
 });
 
 // Close the pop-up manually
@@ -70,6 +93,7 @@ function closePopup() {
   const modal = document.getElementById("popupModal");
   modal.style.display = "none";
 }
+
 
 
 
