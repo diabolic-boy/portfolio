@@ -99,7 +99,7 @@ function closePopup() {
 
 
 // Typewritereffect
-const words = ["Student", "Front-End Developer", "Software Developer"];
+const words = ["Apex Developer", "Web Developer", "Software Developer"];
 let wordIndex = 0;
 let letterIndex = 0;
 const typingSpeed = 100; // Speed of typing
